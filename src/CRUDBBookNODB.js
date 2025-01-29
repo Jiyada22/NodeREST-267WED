@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
-// ทำงานอยู่ในเมม
+
 let books = [
     {
         id: 1,
@@ -21,9 +21,9 @@ let books = [
         author: 'Author 3'
     }
 ];
-// เราเลือกget มาเรียกที่ฟังก์ชัน/books
+
 app.get('/books', (req,res) =>{
-    res.json(books); //bookที่เป็นArray เปลี่ยนเป็นJSON
+    res.json(books);
 });
 
 app.get('/books/ :id', (rep, res) => {
